@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio-Website</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class = "contact">
+      <p>Samuel Aigbomian</p>
+      <span>oselumese.samuel@gmail.com</span>
+      <span>+234 9078 166 715</span>
+    </div>
+    <nav>
+      <a href="#about-me" class="topmenu about-me">About Me</a>
+      <a href="#skill" class="topmenu skills">Skills</a>
+      <a href="#project" class="topmenu projects">Projects</a>
+      <a href="#recommend" class=" topmenu recommendations">Recommendations</a>
+    </nav>
+  </header>
+  <article>
+    <div class="intro" id="about-me">
+      <img src="passP.png" alt="My Passport"/>
+      <div class = "introduction">
+        <h1>Hi, I'm Samuel Oselumese!</h1>
+        <p>I am a student of Caleb University imota lagos. Aiming to be a successful frontend developer with 2 years of practice in both application and presentation layers. I have worked with different languages and built different projects.</p>
+      </div>
+    </div>
+
+    <h2 id="skill">Skills</h2>
+    <div class="skill-row">
+      <div class="skill html">
+        <p class="head">HTML</p>
+        <span> 2 years experience</span>
+      </div>
+      <div class="skill javascript">
+        <p class="head">JavaScript</p>
+        <span>1 year experience</span>
+      </div>
+      <div class="skill java">
+        <p class="head">Java</p>
+        <span>1 year experience</span>
+      </div>
+      <div class="skill react">
+        <p class="head">C++</p>
+        <span>1.5 years experience</span>
+      </div>
+      <div class="skill nodejs">
+        <p class="head">Python</p>
+        <span>2 years experience</span>
+      </div>
+      <div class="skill css">
+        <p class="head">CSS</p>
+        <span>2 years experience</span>
+      </div>
+    </div>
+    
+    <h2 id="project">Projects</h2>
+    <ul>
+      <h3>Games</h3>
+      <li>Developed a Tic-Tac-Toe game with C++</li>
+      <li>Developed a basic shuffling game with html, css and javascript</li>
+      <div class="line"></div>
+      <h3>Calculator</h3>
+      <li>Created a calculator capable of carrying out basic mathematical operation with Html, Css and Javascript</li>
+      <div class="line"></div>
+      <h3>Website</h3>
+      <li>Created a styled single-page website for a chair marketing business with Html and Css</li>
+      <li>Cloned Youtube with Html and Css</li>
+    </ul>
+
+    <h2 id="recommend">Recommendations</h2>
+    <div class="recor">
+      <p>" Samuel is a very quick learner; He got a great attitude. He has a curious mind and asks the right question.</p>
+      <p>" As a friend working with Samuel has been an awesome experience. he is loves to research and always goes the extra step to make sure everything is right."</p>
+      <p>" Samuel is a very jovial and nice person always willing to help where ever he can"</p>
+    </div>
+  </article>
+
+  <aside>
+    <div class="rec-thought">
+      <h4>Leave a Recommendation</h4>
+      <form>
+        <input type = "text" placeholder = "Name (Optional)"/>
+        <textarea placeholder="Message" id="message"></textarea>
+        <button onclick="add()" type = 'button'>Submit</button>
+      </form>
+    </div>
+    <a href="#" class="to-top">
+      <div class="arr">
+        &UpArrow;
+      </div>
+    </a>
+  </aside>
+  <script>
+    function add(){
+      const p = document.createElement('p');
+      p.textContent = `"${document.getElementById('message').value}"`;
+      document.querySelector('.recor').appendChild(p);
+    }
+  </script>
+</body>
+</html>

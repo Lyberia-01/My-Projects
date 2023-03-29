@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compass</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="body">
+    <h1>
+      Compass Game
+    </h1>
+  <p>The direction letters on the "compass" are scrambled. Press the arrows to properly position the direction letters.</p>
+  <div class="grid">
+    <button class="button slant-button" onclick = "tArr();">&lrarr;</button>
+    <div class="color clear" id="Top">E</div>
+    <div>&nbsp;</div>
+  </div>
+  <div class="grid">
+    <div class="color clear" id="Left">S</div>
+    <button class="button"  onclick = "mArr();">&lrarr;</button>
+    <div class="color clear" id="Right">N</div>
+  </div>
+  <div class="grid">
+    <div>&nbsp;</div>
+    <div class="color clear" id="Bottom" >W</div>
+    <button class="button slant-button" onclick = "bArr();">&lrarr;</button>
+  </div>
+  <p>To restart the game press <em>Restart</em> enter N, W, E and S in any order in the boxes below and then press <em>Update</em></p>
+  <form name="myform">
+    <button type = "reset" class="action restart" id="reset" onclick= "resetAll();">Restart</button>
+    <label for="top">Top: </label>
+    <input type="text" maxlength="1" size ="2" disabled class="input" id="t-input"/>
+    <label for="left">Left: </label>
+    <input type="text" maxlength="1" size ="2" disabled class="input" id="l-input"/>
+    <label for="right">Right: </label>
+    <input type="text" maxlength="1" size ="2" disabled class="input" id="r-input"/>
+    <label for="bottom">Bottom: </label>
+    <input type="text" maxlength="1" size ="2" disabled class="input" id="b-input"/>
+    <button type = "button reset" class="action update" id = "update" disabled onclick = "updateC();">Update</button>
+  </form>
+  </div>
+  
+  <script src = "compscript.js"></script>
+</body>
+</html>

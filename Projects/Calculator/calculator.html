@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html{
+      font-size: 62.5%;
+    }
+    body{
+      background-color: #e6f0e6;
+      font-family: sans-serif;
+    }
+    .calc-body{
+      width: 40rem;
+      height: 50rem;
+      margin: 0 auto;
+      border: 8px solid #e6f0e6;
+      border-radius: 44px;
+      background: #e6f0e6;
+      box-shadow: 
+      12px 12px 32px rgba(13,39,80,0.25),
+      -10px 10px 15px #e6f0e6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1{
+      text-align: center;
+      font-size: 2.8rem;
+      color: #006400;
+      margin: 1.5rem 0;
+    }
+    .screen
+    {
+      font-size: 3rem;
+      text-align: end;
+      width: 80%;
+      height: 8rem;
+      margin: 0 auto;
+      margin-top: 1rem;
+      border: 1px solid #e6f0e6;
+      background-color: transparent;
+      border-radius: 2rem;
+      box-shadow: 6px 6px 8px rgba(13, 39, 80, 0.25),
+      -6px -6px 10px #e6f0e6,
+      inset -8px -8px 12px rgba(255,255,255,0.7),
+      inset 5px 5px 8px rgba(13,39,80,0.2);
+      outline: none;
+      padding: 0 2rem;
+    }
+    .buttons{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 3rem;
+      row-gap: 1rem;
+    }
+
+    .button{
+      margin-top: 1rem;
+      font-size: 2.8rem;
+      font-weight: 600;
+      width: 5rem;
+      height: 5rem;
+      background-color: transparent;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0px;
+      border-radius: 10px;
+      outline: none;
+      box-shadow: 
+      4px 4px 8px rgba(13, 39,80,0.25),
+      -4px 4px 8px #e6f0e6;
+      opacity: 0.8;
+    }
+
+    button:focus{
+        cursor: pointer;
+        outline: none;
+        border: none;
+
+    }
+    button:active{
+        box-shadow: 
+        -3px -3px 7px #a0a0a032,
+        3px 3px 5px rgba(94, 104, 121, 0.417);
+        outline: none;
+        border: none;
+    }
+    button:hover{
+        opacity: 1;
+    }
+
+    .op{
+      color: #006400;
+    }
+    .num{
+      color: #333;
+    }
+
+    .funcs{
+      margin-top: 2rem;
+      display: flex;
+      gap: 3rem;
+    }
+
+    .func{
+      font-size: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>BASIC CALCULATOR</h1>
+  </nav>
+  <div class = "calc-body">
+    <input type="text" placeholder=0 name="displayScreen" class="screen" />
+    <div class="funcs">
+      <button class=" func button" onclick="remove()">DEL</button>
+      <button class=" func button" onclick="clr()">AC</button>
+    </div>
+    <div class="buttons">
+      <button class="num button" onclick="pushToScreen(this.textContent)">7</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">8</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">9</button>
+      <button class="op button" onclick="pushToScreen('/')">&divide;</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">4</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">5</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">6</button>
+      <button class="op button" onclick="pushToScreen('*')">&times;</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">1</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">2</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">3</button>
+      <button class="op button" onclick="pushToScreen('-')">&minus;</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">0</button>
+      <button class="num button" onclick="pushToScreen(this.textContent)">.</button>
+      <button class="op button" onclick="pushToScreen(this.textContent)">&plus;</button>
+      <button class="op button" onclick="ans()">&equals;</button>
+    </div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>

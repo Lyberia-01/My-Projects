@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up</title>
+  <link href = "signup.css" rel = "stylesheet" />
+  <link href = "login.css" rel = "stylesheet" />
+</head>
+<body>
+  <article id = "signup">
+    <div class="body1">
+      <h1>
+        <span id="heading"><strong>O</strong><em class="first">D</em></span>&nbsp; LOG<em>S</em>
+      </h1>
+      <form>
+        <label for="fname" class="input-head ">First Name:</label>
+        <input type="text" id = "fname" required class="input1"/>
+        <label for="uname" class="input-head ">User Name:</label>
+        <input type="text" id = "uname" required class="input1"/>
+        <label for="gender" class="input-head ">Gender:</label>
+        <select id="gender" required class="input1" >
+          <option class="first" value="">CHOOSE ONE OPTION:</option>
+          <option value="male">MALE</option>
+          <option value="female">FEMALE</option>
+        </select>
+        <div></div>
+        <label for="password" class="input-head ">Password:</label>
+        <input type="password" id="password" class="input1" required/>
+        <label for="confirm-password" class="input-head ">Confirm Password:</label>
+        <input type="password" id="confirm-password"  class="input1" required/>
+        <button type="submit button" id = "btn" class="input1 btn" onclick = "switchDisplay();">sign up</button>
+      </form>
+  </article>
+  <article id = "log-in">
+    <input type="text" id="check" placeholder="&nbsp;" disabled/>
+  <div class = "body">
+    <h1>
+    <span id="heading"><strong>O</strong><em class="first">D</em></span>&nbsp; LOG<em>S</em>
+    </h1>
+    <form id="login">
+      <label for ="uname" class="input-heading">User name:</label>
+      <input type ="text" name="uname" class="input first" id="first"  required/>
+
+      <label for ="password" class = "input-heading">Password:</label>
+      <input type ="password" name="password" class="input" id="second" required/>
+
+      <button type = " submit button" class="submit" id = "submit" onclick ="check();">LOGIN</button>
+
+      <span><a href="#" id='forgot-password' onclick = "show();">FORGOT PASSWORD?</a></span>
+    </form>
+  </div>
+  <script src = "login.js"></script>
+  </article>
+    <script src = "signup.js"></script>
+  </div>
+</body>
+</html>
